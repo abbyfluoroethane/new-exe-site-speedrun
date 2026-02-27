@@ -1,0 +1,100 @@
+---
+const features = [
+  {
+    title: "Persistent Disks",
+    description: "Your files survive reboots. Full sudo access to a real Linux VM.",
+  },
+  {
+    title: "Instant HTTPS Sharing",
+    description: "Share your dev server like a Google Doc. Built-in auth optional.",
+  },
+  {
+    title: "Shelley AI Agent",
+    description: "Built-in multi-modal AI coding agent. Prototype full apps without touching code.",
+  },
+  {
+    title: "Custom Domains",
+    description: "Point your own domains via CNAME. HTTP proxies included.",
+  },
+  {
+    title: "LLM Gateway",
+    description: "Access AI models for your workloads. No token markup on published rates.",
+  },
+  {
+    title: "Docker & Networking",
+    description: "Run containers, connect VMs to each other. Full Docker support.",
+  },
+  {
+    title: "Email Send & Receive",
+    description: "Send and receive email directly from your VM. No extra config.",
+  },
+  {
+    title: "API Access",
+    description: "Automate VM management. CLI tool, VSCode integration, and full API.",
+  },
+];
+---
+
+<section class="features">
+  <h2>What you get</h2>
+  <div class="grid">
+    {features.map((f) => (
+      <div class="feature">
+        <h3>{f.title}</h3>
+        <p>{f.description}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .features {
+    padding: 3rem 1.5rem;
+    max-width: 56rem;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .feature {
+    padding: 1.25rem;
+    border: 1px solid var(--color-card-border);
+    border-radius: 0.5rem;
+    background: var(--color-card-bg);
+  }
+
+  h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.8125rem;
+    color: var(--color-body);
+    line-height: 1.5;
+  }
+
+  @media (min-width: 640px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>

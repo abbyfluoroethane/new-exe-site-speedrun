@@ -1,0 +1,36 @@
+---
+const links = [
+  { label: "About", href: "/docs/what-is-exe" },
+  { label: "Blog", href: "https://blog.exe.dev" },
+  { label: "Discord", href: "https://discord.gg/jc9WQUfaxf" },
+  { label: "Privacy", href: "/docs/privacy-notice" },
+  { label: "Security", href: "/security" },
+];
+---
+
+<footer>
+  {links.map((link) => (
+    <a href={link.href}>{link.label}</a>
+  ))}
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    font-size: 0.875rem;
+    color: var(--color-subtle);
+  }
+
+  a {
+    color: var(--color-subtle);
+    transition: color 0.2s;
+  }
+
+  a:hover {
+    color: var(--color-hover);
+  }
+</style>
